@@ -17,25 +17,19 @@
 ## Multi-Channel Attention Selection Module
 ![Selection Module](./imgs/method.jpg)
 
-## Oral Presentation Video (click image to play)
-[![Watch the video](https://github.com/Ha0Tang/SelectionGAN/blob/master/imgs/SelectionGAN.png)](https://youtu.be/9GR8V-VR4Qg?t=3389)
-
 ### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1901.04622)
 
 Fast and Robust Dynamic Hand Gesture Recognition via Key Frames Extraction and Feature Fusion.<br>
-[Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1,2*</sup>,  [Dan Xu](http://www.robots.ox.ac.uk/~danxu/)<sup>3*</sup>, [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1,4</sup>, [Yanzhi Wang](https://ywang393.expressions.syr.edu/)<sup>5</sup>, [Jason J. Corso](http://web.eecs.umich.edu/~jjcorso/)<sup>6</sup> and [Yan Yan](https://userweb.cs.txstate.edu/~y_y34/)<sup>2</sup>. (* Equal Contribution.)<br> 
+[Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1,2*</sup>,  [Hong Liu](http://www.robots.ox.ac.uk/~danxu/)<sup>3*</sup>, [Wei Xiao](https://userweb.cs.txstate.edu/~y_y34/)<sup>2</sup> and [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1,4</sup>.<br> 
 <sup>1</sup>University of Trento, Italy, <sup>2</sup>Texas State University, USA, <sup>3</sup>University of Oxford, UK, 
-<sup>4</sup>Huawei Technologies Ireland, Ireland, <sup>5</sup>Northeastern University, USA, <sup>6</sup>University of Michigan, USA   
+<sup>4</sup>Huawei Technologies Ireland, Ireland <br> 
 In Neurocomputing 2018.
 <br>
-The repository offers the implementation of our paper in PyTorch.
-
-![SelectionGAN demo](https://github.com/Ha0Tang/SelectionGAN/blob/master/imgs/SelectionGAN.gif)
-Given an image and some novel semantic maps, SelectionGAN is able to generate the same scene image but with different viewpoints.
+The repository offers the implementation of our paper in MATLAB.
 
 ### [License](./LICENSE.md)
 
-Copyright (C) 2019 University of Trento, Italy and Texas State University, USA.
+Copyright (C) 2019 University of Trento, Italy.
 
 All rights reserved.
 Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**)
