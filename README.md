@@ -10,7 +10,7 @@
 # Key Frames Extraction and Feature Fusion for Dynamic Hand Gesture Recognition
 
 ## Key Frames Extraction Framework
-![Key Frames Extraction Framework](./imgs/framework.jpg)
+![Key Frames Extraction Framework](./imgs/framework_keyframe.jpg)
 
 ## Feature Fusion Module
 ![Feature Fusion Module](./imgs/method.jpg)
