@@ -182,7 +182,7 @@ We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/Se
 If you use this code for your research, please cite our papers.
 ```
 @article{tang2019fast,
-  title={Fast and robust dynamic hand gesture recognition via key frames extraction and feature fusion},
+  title={Fast and Robust Dynamic Hand Gesture Recognition via Key Frames Extraction and Feature Fusion},
   author={Tang, Hao and Liu, Hong and Xiao, Wei and Sebe, Nicu},
   journal={Neurocomputing},
   volume={331},
