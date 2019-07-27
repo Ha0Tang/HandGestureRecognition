@@ -7,23 +7,20 @@
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Ha0Tang/HandGestureRecognition/issues/)
 
-![Hand Gesture Recognition Framework](./imgs/supp_dayton_a2g.jpg)
+# Key Frames Extraction and Feature Fusion for Dynamic Hand Gesture Recognition
 
-# SelectionGAN for Cross-View Image Translation
+## Key Frames Extraction Framework
+![Key Frames Extraction Framework](./imgs/framework.jpg)
 
-## SelectionGAN Framework
-![SelectionGAN Framework](./imgs/framework.jpg)
+## Feature Fusion Module
+![Feature Fusion Module](./imgs/method.jpg)
 
-## Multi-Channel Attention Selection Module
-![Selection Module](./imgs/method.jpg)
-
-### [Project page](http://disi.unitn.it/~hao.tang/project/SelectionGAN.html) | [Paper](https://arxiv.org/abs/1901.04622)
+### [Project page](http://disi.unitn.it/~hao.tang/project/HandGestureRecognition.html) | [Paper](https://arxiv.org/abs/1901.04622)
 
 Fast and Robust Dynamic Hand Gesture Recognition via Key Frames Extraction and Feature Fusion.<br>
-[Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1,2*</sup>,  [Hong Liu](http://www.robots.ox.ac.uk/~danxu/)<sup>3*</sup>, [Wei Xiao](https://userweb.cs.txstate.edu/~y_y34/)<sup>2</sup> and [Nicu Sebe](http://disi.unitn.it/~sebe/)<sup>1,4</sup>.<br> 
-<sup>1</sup>University of Trento, Italy, <sup>2</sup>Texas State University, USA, <sup>3</sup>University of Oxford, UK, 
-<sup>4</sup>Huawei Technologies Ireland, Ireland <br> 
-In Neurocomputing 2018.
+[Hao Tang](http://disi.unitn.it/~hao.tang/)<sup>1</sup>,  [Hong Liu](https://scholar.google.com/citations?user=4CQKG8oAAAAJ&hl=en)<sup>2</sup>, Wei Xiao<sup>3</sup> and [Nicu Sebe](https://scholar.google.com/citations?user=stFCYOAAAAAJ&hl=en)<sup>1</sup>.<br> 
+<sup>1</sup>University of Trento, Italy, <sup>2</sup>Peking University, China, <sup>3</sup>Lingxi Artificial Intelligence Co., Ltd, China.<br>
+In Neurocomputing 2019.
 <br>
 The repository offers the implementation of our paper in MATLAB.
 
@@ -225,22 +222,21 @@ We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/Se
 ### Citation
 If you use this code for your research, please cite our papers.
 ```
-@inproceedings{tang2019multichannel,
-  title={Multi-Channel Attention Selection GAN with Cascaded Semantic Guidancefor Cross-View Image Translation},
-  author={Tang, Hao and Xu, Dan and Sebe, Nicu and Wang, Yanzhi and Corso, Jason J. and Yan, Yan},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2019}
-}
-```
+@article{tang2019fast,
+  title={Fast and robust dynamic hand gesture recognition via key frames extraction and feature fusion},
+  author={Tang, Hao and Liu, Hong and Xiao, Wei and Sebe, Nicu},
+  journal={Neurocomputing},
+  volume={331},
+  pages={424--433},
+  year={2019},
+  publisher={Elsevier}
+}```
 
 ## Acknowledgments
 This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
 
 ## Related Works
-- [X-Seq & X-Fork (CVPR 2018, Torch)](https://github.com/kregmi/cross-view-image-synthesis)
-- [Pix2pix (CVPR 2017, PyTorch)](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
-- [CrossNet (CVPR 2017, Tensorflow)](https://github.com/viibridges/crossnet)
-- [GestureGAN (ACM MM 2018, PyTorch)](https://github.com/Ha0Tang/GestureGAN)
+
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
