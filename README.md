@@ -37,21 +37,11 @@ The code is released for academic research use only. For commercial use, please 
 
 Clone this repo.
 ```bash
-git clone https://github.com/Ha0Tang/SelectionGAN
-cd SelectionGAN/
+git clone https://github.com/Ha0Tang/HandGestureRecognition
+cd HandGestureRecognition/
 ```
 
-This code requires PyTorch 0.4.1 and python 3.6+. Please install dependencies by
-```bash
-pip install -r requirements.txt (for pip users)
-```
-or 
-
-```bash
-./scripts/conda_deps.sh (for Conda users)
-```
-
-To reproduce the results reported in the paper, you would need an NVIDIA GeForce GTX 1080 Ti GPU with 11GB memory.
+This code requires MATLAB. Please install it.
 
 ## Dataset Preparation
 
