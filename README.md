@@ -13,7 +13,7 @@
 ![Key Frames Extraction Framework](./imgs/framework_keyframe.jpg)
 
 ## Feature Fusion Module
-![Feature Fusion Module](./imgs/method.jpg)
+![Feature Fusion Module](./imgs/framework_fusion.jpg)
 
 ### [Project page](http://disi.unitn.it/~hao.tang/project/HandGestureRecognition.html) | [Paper](https://arxiv.org/abs/1901.04622)
 
