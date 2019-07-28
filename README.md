@@ -82,6 +82,11 @@ matlab -nodesktop -nosplash -r "key_frames_extraction"
 ```
 Key frames will be extrated in the folder `./datasets/sample_keyframe`.
 
+## Related Works
+
+- [Clustering by Fast Search-and-Find of Density Peaks](https://people.sissa.it/~laio/Research/Res_clustering.php)
+- [Gender Classification using Pyramid Segmentation for Unconstrained Back-Facing Video Sequences](https://www.researchgate.net/publication/311488680_Gender_Classification_Using_Pyramid_Segmentation_for_Unconstrained_Back-facing_Video_Sequences)
+
 ### Citation
 If you use this code for your research, please cite our papers.
 ```
