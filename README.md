@@ -47,15 +47,27 @@ This code requires MATLAB. Please install it.
 For Cambridge Hand Gesture or Northwestern Hand Gesture, the datasets must be downloaded beforehand. Please download them on the respective webpages.  Please cite their papers if you use the data. 
 
 **Preparing Cambridge Hand Gesture Dataset**. The dataset can be downloaded [here](https://labicvl.github.io/ges_db.htm). You can also download this dataset use the following script:
+```bash
+bash ./datasets/download_handgesture_dataset.sh Cambridge_Hand_Gesture
+```
 
 **Preparing Northwestern Hand Gesture Dataset**. The dataset is proposed in this [paper](https://www.sciencedirect.com/science/article/pii/S0262885611001193). You can download this dataset use the following script:
+```bash
+bash ./datasets/download_handgesture_dataset.sh Northwestern_Hand_Gesture
+```
 
 **Preparing HandGesture Dataset**. This dataset consists of 132 video sequences of 640 by 360 resolution, each of which recorded from a
 different subject (7 males and 4 females) with 12 different gestures (“0”-“9”, “NO” and “OK”). Download this dataset use the following script:
+```bash
+bash ./datasets/download_handgesture_dataset.sh HandGesture
+```
 
 **Preparing Action3D Dataset**. This dataset consists of 1620 image sequences of 6 hand gesture classes (box, high wave, horizontal wave, curl, circle and hand up), which are defined by 2 different hands (right and left hand) and 5 situations (sit, stand, with a pillow, with a laptop
 and with a person). Each class contains 270 image sequences (5 different situations × 2 different hands × 3 times × 9 subjects). Each sequence was recorded in front of a fixed camera having roughly isolated gestures in space and time. All video sequences were uniformly resized into
 320 × 240 in our method. Download this dataset use the following script:
+```bash
+bash ./datasets/download_handgesture_dataset.sh Action3D
+```
 
 **Preparing Your Own Datasets**. Prepare your own dataset like in this [folder](https://github.com/Ha0Tang/HandGestureRecognition/tree/master/datasets/samples).
 
