@@ -44,22 +44,20 @@ This code requires MATLAB. Please install it.
 
 ## Dataset Preparation
 
-For Dayton, CVUSA or Ego2Top, the datasets must be downloaded beforehand. Please download them on the respective webpages. In addition, we put a few sample images in this [code repo](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/samples). Please cite their papers if you use the data. 
+For Cambridge Hand Gesture or Northwestern Hand Gesture, the datasets must be downloaded beforehand. Please download them on the respective webpages.  Please cite their papers if you use the data. 
 
-**Preparing Ablation Dataset**. We conduct ablation study in a2g (aerialto-ground) direction on Dayton dataset. To reduce the
-training time, we randomly select 1/3 samples from the whole 55,000/21,048 samples i.e. around 18,334 samples for training and 7,017 samples for testing. The trianing and testing splits can be downloaded [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/dayton_ablation_split).
+**Preparing Cambridge Hand Gesture Dataset**. The dataset can be downloaded [here](https://labicvl.github.io/ges_db.htm). You can also download this dataset use the following script:
 
-**Preparing Dayton Dataset**. The dataset can be downloaded [here](https://github.com/lugiavn/gt-crossview). In particular, you will need to download dayton.zip. 
-Ground Truth semantic maps are not available for this datasets. We adopt [RefineNet](https://github.com/guosheng/refinenet) trained on CityScapes dataset for generating semantic maps and use them as training data in our experiments. Please cite their papers if you use this dataset.
-Train/Test splits for Dayton dataset can be downloaded from [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/dayton_split).
+**Preparing Northwestern Hand Gesture Dataset**. The dataset is proposed in this [paper](https://www.sciencedirect.com/science/article/pii/S0262885611001193). You can download this dataset use the following script:
 
-**Preparing CVUSA Dataset**. The dataset can be downloaded [here](https://drive.google.com/drive/folders/0BzvmHzyo_zCAX3I4VG1mWnhmcGc), which is from the [page](http://cs.uky.edu/~jacobs/datasets/cvusa/). After unzipping the dataset, prepare the training and testing data as discussed in [our paper](https://arxiv.org/abs/1904.06807). We also convert semantic maps to the color ones by using this [script](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/convert_semantic_map_cvusa.m).
-Since there is no semantic maps for the aerial images on this dataset, we use black images as aerial semantic maps for placehold purposes.
+**Preparing HandGesture Dataset**. This dataset consists of 132 video sequences of 640 by 360 resolution, each of which recorded from a
+different subject (7 males and 4 females) with 12 different gestures (“0”-“9”, “NO” and “OK”). Download this dataset use the following script:
 
-**Preparing Ego2Top Dataset**. The dataset can be downloaded [here](https://www.dropbox.com/sh/bm5g0lzat60td6q/AABQYt-EsIae9ChVR--0Zvo8a?dl=0), which is from this [paper](https://sites.google.com/view/shervinardeshir). We further adopt [this tool](https://github.com/CSAILVision/semantic-segmentation-pytorch) to generate the sematic maps for training. The trianing and testing splits can be downloaded [here](https://github.com/Ha0Tang/SelectionGAN/tree/master/datasets/ego2top_split). 
+**Preparing Action3D Dataset**. This dataset consists of 1620 image sequences of 6 hand gesture classes (box, high wave, horizontal wave, curl, circle and hand up), which are defined by 2 different hands (right and left hand) and 5 situations (sit, stand, with a pillow, with a laptop
+and with a person). Each class contains 270 image sequences (5 different situations × 2 different hands × 3 times × 9 subjects). Each sequence was recorded in front of a fixed camera having roughly isolated gestures in space and time. All video sequences were uniformly resized into
+320 × 240 in our method. Download this dataset use the following script:
 
-**Preparing Your Own Datasets**. Each training sample in the dataset will contain {Ia,Ig,Sa,Sg}, where Ia=aerial image, Ig=ground image, Sa=semantic map for aerial image and Sg=semantic map for ground image.
-Of course, you can use SelectionGAN for your own datasets and tasks.
+**Preparing Your Own Datasets**. Prepare your own dataset like in this [folder](https://github.com/Ha0Tang/HandGestureRecognition/tree/master/datasets/samples).
 
 ## Training New Models
 
