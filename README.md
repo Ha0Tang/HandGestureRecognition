@@ -192,10 +192,7 @@ If you use this code for your research, please cite our papers.
 ```
 
 ## Acknowledgments
-This source code borrows heavily from [Pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). We thank the authors [X-Fork & X-Seq](https://github.com/kregmi/cross-view-image-synthesis) for providing the evaluation codes. This research was partially supported by National Institute of Standards and Technology Grant 60NANB17D191 (YY, JC), Army Research Office W911NF-15-1-0354 (JC) and gift donation from Cisco Inc (YY).
-
-## Related Works
-
+This work is partially supported by National Natural Science Foundation of China (NSFC, U1613209), Shen- zhen Key Laboratory for Intelligent Multimedia and Virtual Reality (ZDSYS201703031405467), Scientific Research Project of Shenzhen City (JCYJ20170306164738129).
 
 ## Contributions
 If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
