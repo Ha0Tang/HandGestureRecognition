@@ -1,6 +1,5 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC4.0-blue.svg)](https://github.com/Ha0Tang/HandGestureRecognition/blob/master/LICENSE.md)
-![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
-![Packagist](https://img.shields.io/badge/Pytorch-0.4.1-red.svg)
+![Packagist](https://img.shields.io/badge/Platform-MATLAB-orange)
 ![Last Commit](https://img.shields.io/github/last-commit/Ha0Tang/HandGestureRecognition)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blue.svg)](https://github.com/Ha0Tang/HandGestureRecognition/graphs/commit-activity)
 ![Contributing](https://img.shields.io/badge/contributions-welcome-red.svg?style=flat)
