@@ -77,83 +77,15 @@ New models can be trained with the following commands.
 
 1. Prepare dataset. 
 
-2. Train.
+2. Extract key frame:
 
 ```bash
-# To train on the dayton dataset on 64*64 resolution,
-
-python train.py --dataroot [path_to_dayton_dataset] \
-	--name [experiment_name] \
-	--model selectiongan \
-	--which_model_netG unet_256 \
-	--which_direction AtoB \
-	--dataset_mode aligned \
-	--norm batch \
-	--gpu_ids 0 \
-	--batchSize 16 \
-	--niter 50 \
-	--niter_decay 50 \
-	--loadSize 72 \
-	--fineSize 64 \
-	--no_flip \
-	--lambda_L1 100 \
-	--lambda_L1_seg 1 \
-	--display_winsize 64 \
-	--display_id 0
+matlab -nodesktop -nosplash -r "key_frames_extraction"
 ```
-```bash
-# To train on the datasets on 256*256 resolution,
-
-python train.py --dataroot [path_to_dataset] \
-	--name [experiment_name] \
-	--model selectiongan \
-	--which_model_netG unet_256 \
-	--which_direction AtoB \
-	--dataset_mode aligned \
-	--norm batch \
-	--gpu_ids 0 \
-	--batchSize [BS] \
-	--loadSize [LS] \
-	--fineSize [FS] \
-	--no_flip \
-	--display_id 0 \
-	--lambda_L1 100 \
-	--lambda_L1_seg 1
-```
-- For dayton dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 20 --niter_decay 15`.
-- For cvusa dataset, [`BS`,`LS`,`FS`]=[4,286,256], append `--niter 15 --niter_decay 15`.
-- For ego2top dataset, [`BS`,`LS`,`FS`]=[8,286,256], append `--niter 5 --niter_decay 5`.
-
-There are many options you can specify. Please use `python train.py --help`. The specified options are printed to the console. To specify the number of GPUs to utilize, use `export CUDA_VISIBLE_DEVICES=[GPU_ID]`. Training will cost about one week with the default `--batchSize` on one NVIDIA GeForce GTX 1080 Ti GPU. So we suggest you use a larger `--batchSize`, while performance is not tested using a larger `--batchSize`.
-
-To view training results and loss plots on local computers, set `--display_id` to a non-zero value and run `python -m visdom.server` on a new terminal and click the URL [http://localhost:8097](http://localhost:8097/).
-On a remote server, replace `localhost` with your server's name, such as [http://server.trento.cs.edu:8097](http://server.trento.cs.edu:8097).
-
-### Can I continue/resume my training? 
-To fine-tune a pre-trained model, or resume the previous training, use the `--continue_train --which_epoch <int> --epoch_count<int+1>` flag. The program will then load the model based on epoch `<int>` you set in `--which_epoch <int>`. Set `--epoch_count <int+1>` to specify a different starting epoch count.
-
 
 ## Testing
 
 Testing is similar to testing pretrained models.
-
-```bash
-python test.py --dataroot [path_to_dataset] \
-	--name [type]_pretrained \
-	--model selectiongan \
-	--which_model_netG unet_256 \
-	--which_direction AtoB \
-	--dataset_mode aligned \
-	--norm batch \
-	--gpu_ids 0 \
-	--batchSize [BS] \
-	--loadSize [LS] \
-	--fineSize [FS] \
-	--no_flip \
-	--eval
-```
-
-Use `--how_many` to specify the maximum number of images to generate. By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
 ## Code Structure
 
