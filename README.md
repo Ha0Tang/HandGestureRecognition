@@ -69,45 +69,18 @@ and with a person). Each class contains 270 image sequences (5 different situati
 bash ./datasets/download_handgesture_dataset.sh Action3D
 ```
 
-**Preparing Your Own Datasets**. Prepare your own dataset like in this [folder](https://github.com/Ha0Tang/HandGestureRecognition/tree/master/datasets/samples).
-
 ## Training New Models
 
 New models can be trained with the following commands.
 
-1. Prepare dataset. 
+1. Prepare your own dataset like in this [folder](https://github.com/Ha0Tang/HandGestureRecognition/tree/master/datasets/sample).
 
 2. Extract key frame:
 
 ```bash
 matlab -nodesktop -nosplash -r "key_frames_extraction"
 ```
-
-## Testing
-
-Testing is similar to testing pretrained models.
-
-## Code Structure
-
-- `train.py`, `test.py`: the entry point for training and testing.
-- `models/selectiongan_model.py`: creates the networks, and compute the losses.
-- `models/networks/`: defines the architecture of all models for SelectionGAN.
-- `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well.
-- `data/`: defines the class for loading images and semantic maps.
-- `scripts/evaluation`: several evaluation source codes.
-
-## Evaluation Code
-
-We use several metrics to evaluate the quality of the generated images.
-
-- Inception Score: [IS](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_topK_KL.py), need install `python 2.7`
-- Top-k prediction accuracy: [Acc](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_accuracies.py), need install `python 2.7`
-- KL score: [KL](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/KL_model_data.py), need install `python 2.7`
-- Structural-Similarity: [SSIM](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Peak Signal-to-Noise Radio: [PSNR](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-- Sharpness Difference: [SD](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/evaluation/compute_ssim_psnr_sharpness.lua), need install `Lua`
-
-We also provide image IDs used in our paper [here](https://github.com/Ha0Tang/SelectionGAN/blob/master/scripts/Image_ids.txt) for further qualitative comparsion.
+Key frames will be extrated in the folder `./datasets/sample_keyframe`.
 
 ### Citation
 If you use this code for your research, please cite our papers.

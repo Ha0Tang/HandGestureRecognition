@@ -1,7 +1,7 @@
 clc; clear all; warning off;tic
 addpath('functions')
-maindir = './datasets/example';
-savedir = './datasets/example_keyframe';
+maindir = './datasets/sample';
+savedir = './datasets/sample_keyframe';
 
 subdir =  dir( maindir );
 X=[];
