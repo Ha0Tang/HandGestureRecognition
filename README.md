@@ -21,7 +21,7 @@ Fast and Robust Dynamic Hand Gesture Recognition via Key Frames Extraction and F
 <sup>1</sup>University of Trento, Italy, <sup>2</sup>Peking University, China, <sup>3</sup>Lingxi Artificial Intelligence Co., Ltd, China.<br>
 In Neurocomputing 2019.
 <br>
-The repository offers the implementation of our paper in MATLAB.
+The repository offers the official implementation of our paper in MATLAB.
 
 ### [License](./LICENSE.md)
 
