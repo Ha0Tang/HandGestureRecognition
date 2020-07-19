@@ -1,9 +1,4 @@
 clc; clear all; tic
-% addpath(genpath('vlfeat-0.9.20-bin')) 这句话在这里不行，也不必要手动添加路径
-%% Fisher encoding
-% The Fisher encoding uses GMM to construct a visual word dictionary. 
-% To exemplify constructing a GMM, consider a number of 2 dimensional data points (see also the GMM tutorial). 
-% In practice, these points would be a collection of SIFT or other local image features. The following code fits a GMM to the points:
 numFeatures = 5000 ;
 dimension = 2 ;
 data = rand(dimension,numFeatures) ;
