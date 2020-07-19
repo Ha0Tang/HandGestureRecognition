@@ -1,7 +1,6 @@
-%% Read depth sequence
 clc,clear,close all;
 maindir = 'F:\Myprojects\matlabProjects\featureExtraction\image_database\MSR_3D_depth_12\';
-subdir =  dir( maindir );   % 先确定子文件夹
+subdir =  dir( maindir ); 
 
 % HON4D parameters
 DIM = 120; % number of 4D projectors
@@ -18,7 +17,7 @@ feature = [];
 for i = 1 : length( subdir )
     if( isequal( subdir( i ).name, '.' ) || ...
         isequal( subdir( i ).name, '..' ) || ...
-        ~subdir( i ).isdir )   % 如果不是目录跳过
+        ~subdir( i ).isdir ) 
         continue;
     end
      
@@ -45,7 +44,6 @@ for i = 1 : length( subdir )
         end
         
         % Find HON4D for an example point at coordinates [center_x,center_y] at depth frame number f
-        % 产生200个随机的点
         randPointNum=200;
         x=size(depth,1);
         y=size(depth,2);
@@ -53,7 +51,7 @@ for i = 1 : length( subdir )
         
         center_x=randi(x,randPointNum,1);
         center_y=randi(y,randPointNum,1);
-        frame=randi([3, f],randPointNum,1); %帧数至少从3开始
+        frame=randi([3, f],randPointNum,1);
         center_z = -1; % not used
         subs =[center_x, center_y, frame];
         %% Compute HON4D 
@@ -68,9 +66,4 @@ for i = 1 : length( subdir )
         clear feature
     end
 end
-
-
-
-
-
 

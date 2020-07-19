@@ -1,18 +1,15 @@
-% 将图像序列一起用BoW表示
 clc; clear all; tic
 addpath(genpath('FLANN'))
-%% 产生字典 现在用的是 K-means
-% ANN index 参数
+
 build_params.algorithm = 'autotuned';
 build_params.target_precision = 0.98; % a high precision is desirable w.r.t quantization
 build_params.build_weight = 0.00;
 build_params.memory_weight = 0.00;
 build_params.sample_fraction = 0.9;
 
-% Cambridge 一共有9类，这里选用每类产生字典
 maindir = 'F:\Myprojects\matlabProjects\featureExtraction\sift_feature\Cambridge_color_9_keyframe_gray_together';
 feaDir = 'F:\Myprojects\matlabProjects\featureExtraction\sift_feature\Cambridge_color_9_keyframe_gray_BoW_256';
-subdir =  dir( maindir );   % 先确定子文件夹
+subdir =  dir( maindir );
 sift_feature =[];
 BoW_rootSIFT = [];
 for i = 3 : length( subdir )     
@@ -21,26 +18,25 @@ for i = 3 : length( subdir )
     matpath = dir( subdirpath );   
     for j = 1 : length( matpath )
         mat = fullfile( maindir, subdir( i ).name, matpath( j ).name  )
-        matdata = load( mat );   % 这里进行你的读取操作
+        matdata = load( mat );
         sift_feature =[sift_feature; matdata.feature];
     end
     ndata = size(sift_feature, 1);
     sift_feature = sift_feature';
-    % calculate rootSIFT 将提取的SIFT特征转成rootSIFT特征
     sum_val = sum(sift_feature);
     for n = 1:128
         sift_feature(n, :) = sift_feature(n, :)./sum_val;
     end
     sift_feature = sqrt(sift_feature);
    
-    X = sift_feature; %  X的每一列对应一个特征点
+    X = sift_feature;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     K = 1024;
 %     K = 512;
     K = 256;
 %     K = 128;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % 产生字典
+
     fprintf('build vocabulary...\r\n');
     [Centroids, Indexs]=kmeans(X,K);  % 这里可以换成AKM 这个kmeans在matlab15上运行出错
     Centroids = single(Centroids);
@@ -51,11 +47,10 @@ for i = 3 : length( subdir )
     [index, parameters, speedup] = flann_build_index(Centroids, build_params);
     fprintf('build Ann index done!\r\n');
     
-    % 产生BoW向量
     fprintf('build BoW vector...\r\n');
     for j = 1 : length( matpath )
         mat = fullfile( maindir, subdir( i ).name, matpath( j ).name  )
-        matdata = load( mat );   % 这里进行你的读取操作
+        matdata = load( mat );  
         feature = matdata.feature;
         % calculate rootSIFT
         feature = feature'; % 128 x n的形式

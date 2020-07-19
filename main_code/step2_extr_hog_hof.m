@@ -18,7 +18,6 @@ hofDesc = cell(4, 1);
 hofInfo = cell(4, 1);
 idx = 1;
 
-% 1 Northwestern, 熵极值法提取关键5帧?
 imgDir = 'F:\Myprojects\matlabProjects\featureExtraction\image_database\Northwestern_color_10_key_frames_max_5entropy';
 feaDir = 'F:\Myprojects\matlabProjects\featureExtraction\hog+hof_feature\Northwestern_color_10_key_frames_max_5entropy';
 

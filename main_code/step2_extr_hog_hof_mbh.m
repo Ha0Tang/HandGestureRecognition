@@ -17,7 +17,6 @@ MBHRowDesc = cell(4, 1);
 MBHColDesc = cell(4, 1);
 mbhInfo = cell(4, 1);
 
-% 1 Northwestern, 熵极值法提取关键5帧?
 imgDir = 'F:\Myprojects\matlabProjects\featureExtraction\01';
 hog_feaDir = 'F:\Myprojects\matlabProjects\featureExtraction\hog+hof_feature\Northwestern';
 hof_feaDir = 'F:\Myprojects\matlabProjects\featureExtraction\hog+hof_feature\Northwestern';
@@ -56,7 +55,7 @@ for i = 1 : length( subdir )
         
         % call HOG
         idx = 1;
-%         for frameSampleRate=[1 2 3 6]
+
         for frameSampleRate=1
             % Subsample framerate of video
             sampledVid = vid(:,:,1:frameSampleRate:end);  % 至少要12帧
@@ -70,7 +69,7 @@ for i = 1 : length( subdir )
         end
         % call HOF
         idx = 1;
-%         for frameSampleRate=[1 2 3 6]
+
         for frameSampleRate=1
             % Subsample framerate of video
             sampledVid = vid(:,:,1:frameSampleRate:end); % 至少要13帧
@@ -84,7 +83,7 @@ for i = 1 : length( subdir )
         end
         % call MBH
         idx = 1;
-%         for frameSampleRate=[1 2 3 6]
+
         for frameSampleRate=1
             % Subsample framerate of video
             sampledVid = vid(:,:,1:frameSampleRate:end); % 最少13帧

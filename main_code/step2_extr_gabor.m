@@ -4,12 +4,12 @@ gaborArray = gaborFilterBank(5,8,39,39);  % Generates the Gabor filter bank
 imgDir = 'F:\Myprojects\matlabProjects\featureExtraction\image_database\Northwestern_color_10_key_frames_max_5entropy';
 feaDir = 'F:\Myprojects\matlabProjects\featureExtraction\Gabor_feature\Northwestern_color_10_key_frames_max_5entropy';
 
-subdir =  dir( imgDir );   % 先确定子文件夹
+subdir =  dir( imgDir );
 gaborfeature =[];
 for i = 1 : length( subdir )
     if( isequal( subdir( i ).name, '.' ) || ...
         isequal( subdir( i ).name, '..' ) || ...
-        ~subdir( i ).isdir )   % 如果不是目录跳过
+        ~subdir( i ).isdir ) 
         continue;
     end
      
@@ -19,12 +19,12 @@ for i = 1 : length( subdir )
     for j = 1 : length( subsubdirpath )
         if( isequal( subsubdirpath( j ).name, '.' ) || ...
             isequal( subsubdirpath( j ).name, '..' ) || ...
-            ~subsubdirpath( j ).isdir )   % 如果不是目录跳过
+            ~subsubdirpath( j ).isdir )
             continue;
         end
  
         subsubsubdirpath = fullfile( imgDir, subdir( i ).name, subsubdirpath( j ).name, '*.jpg' )
-        images = dir( subsubsubdirpath );   % 在这个子文件夹下找后缀为jpg的文件
+        images = dir( subsubsubdirpath );
         for k = 1 : length( images )
             imagepath = fullfile( imgDir, subdir( i ).name, subsubdirpath( j ).name, images( k ).name  )
             imagedata = imread(imagepath);
@@ -38,7 +38,7 @@ for i = 1 : length( subdir )
         end;
         save(fpath, 'gaborfeature');
         rmdir(fpath)
-        gaborfeature = []; % 很重要的一步
+        gaborfeature = [];
     end;
 end
 toc

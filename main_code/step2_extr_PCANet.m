@@ -1,7 +1,5 @@
-% 将图像保存为cell中
 clc; clear all; tic
 addpath(genpath('PCANet'))
-%% PCANet parameters (they should be funed based on validation set; i.e., ValData & ValLabel)
 PCANet.NumStages = 2;
 PCANet.PatchSize = [5 5];
 PCANet.NumFilters = [40 8];
