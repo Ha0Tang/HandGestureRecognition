@@ -1,35 +1,5 @@
 colordef white
 
-%%  选关键5帧
-% clc; clear all; tic
-% imgDir = 'F:\Myprojects\matlabProjects\featureExtraction\image_database\Cambridge_color_9';
-% subdir =  dir( imgDir );   % 先确定子文件夹
-%  
-% for i = 3 : length( subdir )
-%     subdirpath = fullfile( imgDir, subdir( i ).name);   
-%     subsubdirpath = dir( subdirpath );
-%     
-%     for j = 3 : length( subsubdirpath )
-%         images = [];
-%         subsubsubdirpath = fullfile( imgDir, subdir( i ).name, subsubdirpath( j ).name);
-%         images = dir( subsubsubdirpath);   % 在这个子文件夹下找后缀为jpg的文件
-%         num = length( images );
-% 
-%         for k = 3:num
-%             if ( k == 4 || k== round((num-3)/4)+1 || k== round(2*(num-3)/4)+1 || k== round(3*(num-3)/4)+1 || k ==num)
-%                 imagepath = fullfile( imgDir, subdir( i ).name, subsubdirpath( j ).name, images( k ).name  )
-%                 newdir = ('F:\Myprojects\matlabProjects\featureExtraction\image_database\save\Cambridge_color_9_keyframe\');
-%                 saveDir = fullfile( newdir, subdir( i ).name, subsubdirpath( j ).name)
-%                 if ~isdir(saveDir),
-%                     mkdir(saveDir);
-%                 end;
-%                 copyfile(imagepath, saveDir);  
-%             end
-%         end
-% 
-%     end;
-% end
-% toc
 
 %% 手动选取平均的5帧
 % clc; clear all; tic
