@@ -82,6 +82,8 @@ matlab -nodesktop -nosplash -r "key_frames_extraction"
 ```
 Key frames will be extrated in the folder `./datasets/sample_keyframe`.
 
+3. Go this [folder](https://github.com/Ha0Tang/HandGestureRecognition/tree/master/main_code) for further processes.
+
 ## Related Works
 
 - [Clustering by Fast Search-and-Find of Density Peaks](https://people.sissa.it/~laio/Research/Res_clustering.php)
