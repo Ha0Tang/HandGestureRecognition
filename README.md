@@ -30,7 +30,7 @@ Copyright (C) 2019 University of Trento, Italy.
 All rights reserved.
 Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (**Attribution-NonCommercial-ShareAlike 4.0 International**)
 
-The code is released for academic research use only. For commercial use, please contact [hao.tang@unitn.it](hao.tang@unitn.it).
+The code is released for academic research use only. For commercial use, please contact [bjdxtanghao@gmail.com](bjdxtanghao@gmail.com).
 
 ## Installation
 
@@ -108,5 +108,5 @@ If you use this code for your research, please cite our papers.
 This work is partially supported by National Natural Science Foundation of China (NSFC, U1613209), Shen- zhen Key Laboratory for Intelligent Multimedia and Virtual Reality (ZDSYS201703031405467), Scientific Research Project of Shenzhen City (JCYJ20170306164738129).
 
 ## Contributions
-If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([hao.tang@unitn.it](hao.tang@unitn.it)).
+If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Hao Tang ([bjdxtanghao@gmail.com](bjdxtanghao@gmail.com)).
 
